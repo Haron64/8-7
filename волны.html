@@ -1,0 +1,28 @@
+<html>
+  <head>
+  </head>
+	<script>
+	function draw(){
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext('2d');
+	var r = 400;
+	var x = 800;
+	while (r>0){
+	var colorRed = Math.floor(255*Math.random());
+	var colorGreen = Math.floor(255*Math.random());
+	var colorBlue= Math.floor(255*Math.random());
+	ctx.beginPath();
+	ctx.moveTo(x,400);
+	ctx.arc(400,400,r,0,Math.PI*2,true);
+	ctx.strokeStyle = 'rgb('+colorRed+','+colorGreen+','+colorBlue+')';
+	ctx.lineWidth = 2;
+	ctx.stroke();
+	r=r-2;
+	x=x-2;
+	}
+	}
+    </script>
+	<body onload = "draw()">
+	<canvas id="canvas" width="800" height="800"> </canvas>
+  </body>
+</html>
