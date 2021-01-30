@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script>
+			function draw(){
+				var canvas = document.getElementById("canvas");
+				var ctx = canvas.getContext('2d');
+				ctx.beginPath();
+				ctx.moveTo(400,400);
+				ctx.arc(400,400,200,0,Math.PI*2,false);
+				ctx.strokeStyle = 'black';
+				ctx.fillStyle = 'white';
+				ctx.lineWidth = 5;
+				ctx.stroke();
+				ctx.fill();
+				ctx.beginPath();
+				ctx.moveTo(400,400);
+				ctx.arc(400,400,20,0,Math.PI*2,false);
+				ctx.fillStyle = 'black';
+				ctx.fill();
+				ctx.beginPath();
+				ctx.moveTo(400,200);
+				ctx.lineTo(400,600);
+				ctx.moveTo(420,200);
+				ctx.lineTo(380,600);
+				ctx.moveTo(440,207);
+				ctx.lineTo(360,597);
+				ctx.moveTo(460,208);
+				ctx.lineTo(340,598);
+				ctx.moveTo(480,213);
+				ctx.lineTo(320,585);
+				ctx.moveTo(500,212);
+				ctx.lineTo(300,583);
+				ctx.moveTo(200,400);
+				ctx.lineTo(600,400);
+				ctx.stroke();
+			}
+		</script>
+	</head>
+	<body onload = "draw()">
+		<canvas id="canvas" width="1000" height="1000"> </canvas>
+	</body>
+</html>
